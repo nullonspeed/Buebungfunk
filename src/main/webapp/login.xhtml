@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: basti
+  Date: 07.02.2023
+  Time: 11:27
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Title</title>
+</h:head>
+
+<h:body>
+    <h:form>
+        <h:column> Personendaten eingeben:</h:column>
+ <br/>
+        <h:column> Vorname: </h:column>
+
+    <h:inputText id="vorname" value="#{ user.vorname }" autocomplete="off" readonly="false" required="true" requiredMessage="Vorname is required"  accesskey="q"> </h:inputText>
+
+        <br />
+        <h:column> Nachname:</h:column>
+
+    <h:inputText id="nachname" value="#{ user.nachname }" autocomplete="off" readonly="false" required="true" requiredMessage="Nachname is required"  accesskey="qq"> </h:inputText>
+
+    <br />
+
+    <h:commandButton action="#{user.upload()}" value="Speichern"></h:commandButton>
+       <br />
+        <h:message for="vorname" style="color: red"></h:message>
+   <br />
+    <h:message for="nachname" style="color: red"></h:message>
+    </h:form>
+</h:body>
+
+</html>
